@@ -1,0 +1,659 @@
+.appContainer {
+  display: flex;
+  min-height: 100vh;
+  background-color: #F9FAFB;
+  position: relative;
+  width: 100%;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 16rem;
+  position: relative;
+  z-index: 1;
+  width: calc(100% - 16rem);
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.headerInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1F2A44;
+  margin-bottom: 0.5rem;
+  font-family: 'Product Sans', bold;
+}
+
+.headerSubtitle {
+  color: #6B7280;
+  font-size: 0.875rem;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.notificationContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.notificationContainer:hover {
+  background-color: #E5E7EB;
+}
+
+.notificationBadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #EF4444;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+}
+
+.notificationDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 320px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin-top: 0.5rem;
+  z-index: 1000;
+}
+
+.notificationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #000000;
+}
+
+.notificationHeader h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1F2A44;
+  margin: 0;
+}
+
+.notificationActions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.markAllRead {
+  background: none;
+  border: none;
+  color: #16325B;
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s;
+}
+
+.markAllRead:hover {
+  background-color: rgba(22, 50, 91, 0.1);
+}
+
+.closeNotifications {
+  background: none;
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+  color: #6B7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.closeNotifications:hover {
+  background: #F3F4F6;
+  color: #1F2A44;
+}
+
+.closeIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.notificationList {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.notificationItem {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  border-bottom: 1px solid #E5E7EB;
+  transition: background-color 0.2s;
+}
+
+.notificationItem:hover {
+  background-color: #F9FAFB;
+}
+
+.notificationItem.unread {
+  background-color: #F3F4F6;
+}
+
+.notificationIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.notificationIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: black;
+  cursor: pointer;
+}
+
+.notificationTypeIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke-width: 2;
+}
+
+.notificationTypeIcon.alert {
+  color: #EF4444;
+}
+
+.notificationTypeIcon.data {
+  color: #3B82F6;
+}
+
+.notificationContent {
+  flex: 1;
+}
+
+.notificationMessage {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #1F2A44;
+  line-height: 1.4;
+}
+
+.notificationTime {
+  font-size: 0.75rem;
+  color: #6B7280;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.notificationFooter {
+  padding: 1rem;
+  border-top: 1px solid #E5E7EB;
+  text-align: center;
+}
+
+.viewAllButton {
+  background: none;
+  border: none;
+  color: #227B94;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.viewAllButton:hover {
+  background-color: #F3F4F6;
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  font-family: 'Product Sans', bold;
+}
+
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #16325B;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: white;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-weight: 500;
+  color: #1F2A44;
+}
+
+.userRole {
+  font-size: 0.75rem;
+  color: #6B7280;
+}
+
+.nodeInfo {
+  align-items: left;
+  margin-bottom: 1.5rem;
+}
+
+.nodeText, .timeText {
+  color: #1F2A44;
+  font-family: 'Product Sans', bold;
+  margin: 0;
+  align-self: start;
+  align-items: left;
+}
+
+.nodeText {
+  font-size: 0.875rem;
+  font-weight: 500;
+  align-items: left;
+}
+
+.timeText {
+  font-size: 0.875rem;
+  align-items: left;
+}
+
+.settingsCardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.settingsCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.settingsCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.cardHeader h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #212529;
+}
+
+.cardIcon {
+  width: 24px;
+  height: 24px;
+  color: #227B94;
+}
+
+/* Profile Card Styles */
+.profileSection {
+  padding: 2rem;
+}
+
+.profilePictureContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profilePicture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #e9ecef;
+}
+
+.profileIcon {
+  width: 60px;
+  height: 60px;
+  color: #495057;
+}
+
+.manageProfileButton {
+  padding: 0.75rem 1.5rem;
+  background: #227B94;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.manageProfileButton:hover {
+  background: #1a6177;
+}
+
+/* Account Card Styles */
+.accountSection {
+  padding: 2rem;
+}
+
+.accountActions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accountButton {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  color: #495057;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.accountButton:hover {
+  background: #f8f9fa;
+  border-color: #227B94;
+  color: #227B94;
+}
+
+.accountButtonIcon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Notifications Card Styles */
+.notificationSection {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notificationToggleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.notificationToggleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  color: #495057;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.notificationToggleButton:hover {
+  background: #f8f9fa;
+  border-color: #227B94;
+  color: #227B94;
+}
+
+.notificationToggleButton.active {
+  background: #e3f2fd;
+  border-color: #227B94;
+  color: #227B94;
+}
+
+.notificationToggleIcon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Appearance Section Styles */
+.appearanceSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 2rem;
+}
+
+.themeSwitcher {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.themeButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid #e9ecef;
+  background: white;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.themeButton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  border-color: #227B94;
+}
+
+.themeButton.active {
+  background: #e3f2fd;
+  border-color: #227B94;
+  color: #227B94;
+}
+
+.themeIcon {
+  width: 48px;
+  height: 48px;
+  stroke-width: 2;
+}
+
+.themeButton span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Notification Section Styles */
+.notificationToggleButton span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Account Section Styles */
+.accountSection {
+  padding: 2rem;
+}
+
+.accountHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.accountUserIcon {
+  width: 40px;
+  height: 40px;
+  color: #495057;
+}
+
+.accountUserName {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #212529;
+}
+
+.accountActions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accountButton {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  color: #495057;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.accountButton:hover {
+  background: #f8f9fa;
+  border-color: #227B94;
+  color: #227B94;
+}
+
+.accountButtonIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke-width: 2;
+}
+
+/* Account section styles */
+.accountActionGroup {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.accountActionGroup h3 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.accountForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.accountForm input {
+  padding: 12px;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.accountForm input:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.submitButton {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
+}
+
+.errorMessage {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: -10px;
+} 

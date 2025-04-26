@@ -1,0 +1,24 @@
+:root {
+  --primary-blue: #16325B;
+  --secondary-blue: #78B7D0;
+  --success-green: #10B981;
+  --danger-red: #EF4444;
+  --background-gray: #F9FAFB;
+  --text-primary: #1F2A44;
+  --text-secondary: #6B7280;
+  --border-color: #E5E7EB;
+}
+
+.appContainer {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--background-gray);
+}
+
+.mainContent {
+  flex: 1;
+  margin-left: 16rem;
+  padding: 2rem;
+  background-color: var(--background-gray);
+  width: calc(100% - 16rem);
+} 

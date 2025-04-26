@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.login-card {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 350px;
+    max-width: 90%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(8px);
+}
+
+.login-title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #111827;
+}
+
+.login-logo {
+    height: 4rem;
+    width: 8rem;
+    margin: 0 auto 0.75rem auto;
+    border-radius: 0.5rem;
+}
+
+.login-welcome-text {
+    font-family: 'Product Sans', bold;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.login-input {
+    margin-bottom: 0.75rem;
+}
+
+.login-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #374151;
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-family: 'Product Sans', bold
+}
+
+.login-input-field {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: box-shadow 0.2s ease;
+    font-family: 'Product Sans';
+    font-size: 0.9rem;
+    color: #374151;
+    background-color: white;
+}
+
+.login-input-field::placeholder {
+    color: #9CA3AF;
+    opacity: 1;
+}
+
+.login-input-field:focus {
+    box-shadow: 0 0 0 2px #16325B;
+}
+
+.login-input-field.error {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+.login-input-field:-webkit-autofill,
+.login-input-field:-webkit-autofill:hover,
+.login-input-field:-webkit-autofill:focus,
+.login-input-field:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    -webkit-text-fill-color: #000000 !important;
+    background-color: #ffffff !important;
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.login-button-container {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.login-button {
+    flex: 1;
+    background-color: #16325B;
+    color: white;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease;
+    border: none;
+    font-family: 'Product Sans', bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.login-button a {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+
+.login-button:hover {
+    background-color: #227B94;
+}
+
+.login-register-button {
+    flex: 1;
+    background-color: #227B94;
+    color: white;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease;
+    border: none;
+    font-family: 'Product Sans', bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.login-register-button a {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+
+.login-register-button:hover {
+    background-color: #16325B;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.forgot-password-link {
+    color: #666;
+    text-decoration: underline;
+    font-size: 14px;
+    transition: color 0.2s ease;
+    font-family: 'Product Sans', bold;
+}
+
+.forgot-password-link:hover {
+    color: #333;
+}
+    

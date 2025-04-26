@@ -1,0 +1,646 @@
+.appContainer {
+    display: flex;
+    min-height: 100vh;
+    background-color: #F9FAFB;
+    position: relative;
+    width: 100%;
+}
+
+.mainContent {
+    flex: 1;
+    padding: 2rem;
+    margin-left: 16rem;
+    position: relative;
+    z-index: 1;
+    width: calc(100% - 16rem);
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.headerInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.headerTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1F2A44;
+    margin-bottom: 0.5rem;
+    font-family: 'Product Sans', bold;
+}
+  
+.headerSubtitle {
+    color: #6B7280;
+    font-size: 0.875rem;
+}
+
+.headerRight {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.notificationContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.notificationContainer:hover {
+    background-color: #E5E7EB;
+}
+
+.notificationBadge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #EF4444;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6px;
+}
+
+.notificationDropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 320px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    margin-top: 0.5rem;
+    z-index: 1000;
+}
+
+.notificationHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #000000;
+}
+
+.notificationHeader h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1F2A44;
+    margin: 0;
+}
+
+.notificationActions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.markAllRead {
+    background: none;
+    border: none;
+    color: #16325B;
+    font-size: 0.875rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+}
+
+.markAllRead:hover {
+    background-color: rgba(22, 50, 91, 0.1);
+}
+
+.closeNotifications {
+    background: none;
+    border: none;
+    padding: 0.25rem;
+    cursor: pointer;
+    color: #6B7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+.closeNotifications:hover {
+    background: #F3F4F6;
+    color: #1F2A44;
+}
+
+.closeIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.notificationList {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.notificationItem {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem;
+    border-bottom: 1px solid #E5E7EB;
+    transition: background-color 0.2s;
+}
+
+.notificationItem:hover {
+    background-color: #F9FAFB;
+}
+
+.notificationItem.unread {
+    background-color: #F3F4F6;
+}
+
+.notificationIconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.notificationIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: black;
+    cursor: pointer;
+}
+
+.notificationTypeIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+    stroke-width: 2;
+}
+
+.notificationTypeIconAlert {
+    color: #EF4444;
+}
+
+.notificationTypeIconData {
+    color: #3B82F6;
+}
+
+.notificationContent {
+    flex: 1;
+}
+
+.notificationMessage {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #1F2A44;
+    line-height: 1.4;
+}
+
+.notificationTime {
+    font-size: 0.75rem;
+    color: #6B7280;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.notificationFooter {
+    padding: 1rem;
+    border-top: 1px solid #E5E7EB;
+    text-align: center;
+}
+
+.viewAllButton {
+    background: none;
+    border: none;
+    color: #227B94;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.viewAllButton:hover {
+    background-color: #F3F4F6;
+}
+
+.userProfile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    font-family: 'Product Sans', bold;
+}
+
+.avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #16325B;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatarIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: white;
+}
+  
+.userInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.userName {
+    font-weight: 500;
+    color: #1F2A44;
+}
+  
+.userRole {
+    font-size: 0.75rem;
+    color: #6B7280;
+}
+
+.nodeInfo {
+    align-items: left;
+    margin-bottom: 1.5rem;
+}
+
+.nodeText, .timeText {
+    color: #1F2A44;
+    font-family: 'Product Sans', bold;
+    margin: 0;
+    align-self: start;
+    align-items: left;
+}
+
+.nodeText {
+    font-size: 0.875rem;
+    font-weight: 500;
+    align-items: left;
+}
+
+.timeText {
+    font-size: 0.875rem;
+    align-items: left;
+}
+
+.widgetsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.widgetsGrid .widget:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.widgetsGrid .widget:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.widgetsGrid .widget:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.widgetsGrid .widget:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.widget {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.widgetTitle {
+    color: #1F2A44;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.widgetContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    gap: 2rem;
+}
+
+.thermometer {
+    position: relative;
+    width: 40px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thermometerTube {
+    width: 20px;
+    height: 120px;
+    background-color: #e5e7eb;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.thermometerFill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, #ef4444, #f97316);
+    transition: height 0.5s ease;
+}
+
+.thermometerBulb {
+    width: 40px;
+    height: 40px;
+    background: #ef4444;
+    border-radius: 50%;
+    margin-top: -10px;
+}
+
+.temperatureValue {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #16325B;
+}
+  
+.gasMeter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.gasMeterCircle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gasMeterFill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        #22C55E 0% 25%,    /* Green for safe levels */
+        #EAB308 25% 50%,   /* Yellow for warning */
+        #F97316 50% 75%,   /* Orange for caution */
+        #EF4444 75% 100%   /* Red for danger */
+    );
+    transition: background 0.3s ease;
+}
+
+.gasMeterMask {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gasMeterValue {
+    font-size: 2rem;
+    font-weight: 600;
+    background: #16325B;
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+}
+
+.gasMeterLabels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.gasMeterLabels span {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.gasMeterLabels span:nth-child(1) { color: #22C55E; } /* Green */
+.gasMeterLabels span:nth-child(2) { color: #EAB308; } /* Yellow */
+.gasMeterLabels span:nth-child(3) { color: #EF4444; } /* Red */
+
+.gasMeterStatus {
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: #4B5563;
+    text-align: center;
+}
+
+.statusText {
+    font-weight: 600;
+}
+
+.statusText.normal {
+    color: #22C55E;
+}
+
+.statusText.moderate {
+    color: #EAB308;
+}
+
+.statusText.high {
+    color: #F97316;
+}
+
+.statusText.danger {
+    color: #EF4444;
+}
+
+/* Humidity Widget Styles */
+.humidityMeter {
+    text-align: center;
+}
+
+.humidityValue {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #3B82F6;
+    margin-bottom: 0.5rem;
+}
+
+.humidityLabel {
+    color: #6B7280;
+    font-size: 0.875rem;
+}
+
+/* Wind Widget Styles */
+.windMeter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.windCompass {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.compassCircle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.compassArrow {
+    position: absolute;
+    width: 4px;
+    height: 60px;
+    background: #16325B;
+    transform-origin: bottom center;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.compassArrow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -8px;
+    width: 20px;
+    height: 20px;
+    background: #16325B;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.compassPoints {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.compassPoint {
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6B7280;
+}
+
+.compassPoint:nth-child(1) { top: 10px; } /* N */
+.compassPoint:nth-child(2) { right: 10px; } /* E */
+.compassPoint:nth-child(3) { bottom: 10px; } /* S */
+.compassPoint:nth-child(4) { left: 10px; } /* W */
+
+.windInfo {
+    text-align: center;
+}
+
+.windValue {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #16325B;
+    margin-bottom: 0.5rem;
+}
+
+.windDirection {
+    color: #6B7280;
+    font-size: 0.875rem;
+}
+
+.humidityThermometer {
+    position: relative;
+    width: 40px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.humidityTube {
+    width: 20px;
+    height: 120px;
+    background-color: #e5e7eb;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.humidityFill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, #3B82F6, #60A5FA);
+    transition: height 0.5s ease;
+}
+
+.humidityBulb {
+    width: 40px;
+    height: 40px;
+    background: #3B82F6;
+    border-radius: 50%;
+    margin-top: -10px;
+}
+
+.humidityMeter {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.humidityValue {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #3B82F6;
+}

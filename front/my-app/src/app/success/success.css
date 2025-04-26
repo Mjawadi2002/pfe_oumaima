@@ -1,0 +1,77 @@
+.success-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.success-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 350px;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.success-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #111827;
+    font-family: 'Product Sans', bold;
+    font-weight: bold;
+}
+
+.success-logo {
+    height: 4rem;
+    width: 8rem;
+    margin: 0 auto 0.75rem auto;
+    border-radius: 0.5rem;
+}
+
+.success-text {
+    color: #374151;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    font-family: 'Product Sans', bold;
+}
+
+.success-button-container {
+    margin-top: 1rem;
+}
+
+.success-button {
+    display: inline-block;
+    background-color: #16325B;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-family: 'Product Sans', bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+}
+
+.success-button:hover {
+    background-color: #227B94;
+} 
